@@ -1,9 +1,7 @@
-"""provides multiple returns."""
 #!/usr/bin/python3
 
 
 def multiple_returns(sentence):
-    """Multiple returns."""
     tuplea = ()
     if len(sentence) == 0:
         tuplea = 0, "None"
