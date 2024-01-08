@@ -1,7 +1,7 @@
 """provides multiple returns."""
-
-
 #!/usr/bin/python3
+
+
 def multiple_returns(sentence):
     """Multiple returns."""
     tuplea = ()
