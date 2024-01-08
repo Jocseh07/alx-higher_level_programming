@@ -3,6 +3,6 @@
 
 def no_c(my_string):
     str = my_string
-    str = str.replace("c", "")
-    str = str.replace("C", "")
+    translation = {67: None, 99: None}
+    str = str.translate(translation)
     return str
