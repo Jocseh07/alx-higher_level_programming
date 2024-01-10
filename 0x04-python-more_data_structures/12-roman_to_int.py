@@ -17,6 +17,8 @@ def roman_to_int(roman_string):
     for n in sortedNumbers:
         if sortedNumbers.index(n) <= numbers.index(n):
             number += n
-        else:
+        elif sortedNumbers.index(n) > numbers.index(n):
             number -= n
+    if number > 3999:
+        return 0
     return number
