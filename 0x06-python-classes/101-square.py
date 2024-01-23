@@ -68,12 +68,10 @@ class Square:
 
     def __str__(self):
         """Prints with the print()."""
-        if self.__size == 0:
-            print("")
-            return
-
         [print("") for _ in range(0, self.__position[1])]
-        for _ in range(0, self.__size):
+        for a in range(0, self.__size):
             [print(" ", end="") for _ in range(0, self.__position[0])]
             [print("#", end="") for _ in range(0, self.__size)]
-            print("")
+            if a != self.__size - 1:
+                print("")
+        return ""
