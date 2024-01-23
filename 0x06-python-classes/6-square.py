@@ -11,8 +11,8 @@ class Square:
             size (int): size of new square.
             position (int, int): tuple containing position.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -52,7 +52,7 @@ class Square:
 
     def area(self):
         """Find the area of the Square."""
-        return self.__size**2
+        return self.__size * self.__size
 
     def my_print(self):
         """Prints in stdout the square with the character #."""
