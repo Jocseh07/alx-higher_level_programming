@@ -46,7 +46,7 @@ class Square:
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError(str)
         for num in value:
-            if isinstance(num, int) or num < 0:
+            if not isinstance(num, int) or num < 0:
                 raise TypeError(str)
         self.__position = value
 
