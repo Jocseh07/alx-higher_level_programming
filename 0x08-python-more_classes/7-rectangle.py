@@ -3,7 +3,11 @@
 
 
 class Rectangle:
-    """Represent a Rectangle."""
+    """Represent a Rectangle.
+    Args:
+        number_of_instances (int): no of instances.
+        print_symbol (any): symbol for representation.
+    """
 
     number_of_instances = 0
     print_symbol = "#"
@@ -63,7 +67,7 @@ class Rectangle:
         rectangle = []
         for a in range(self.__height):
             for _ in range(self.__width):
-                rectangle.append(str(Rectangle.print_symbol))
+                rectangle.append(str(self.print_symbol))
             if a != self.__height - 1:
                 rectangle.append("\n")
         return "".join(rectangle)
