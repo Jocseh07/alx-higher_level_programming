@@ -3,7 +3,11 @@
 
 
 class Rectangle:
-    """Represent a Rectangle."""
+    """Initialize a new Rectangle.
+    Args:
+        width (int): size of the new Rectangle.
+        height (int): height of the new Rectangle.
+    """
 
     number_of_instances = 0
     print_symbol = "#"
@@ -69,7 +73,7 @@ class Rectangle:
         rectangle = []
         for a in range(self.__height):
             for _ in range(self.__width):
-                rectangle.append("#")
+                rectangle.append(str(self.print_symbol))
             if a != self.__height - 1:
                 rectangle.append("\n")
         return "".join(rectangle)
