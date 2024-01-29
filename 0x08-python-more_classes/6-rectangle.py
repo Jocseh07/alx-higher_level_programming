@@ -60,10 +60,11 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         rectangle = []
-        for _ in range(self.__height):
+        for a in range(self.__height):
             for _ in range(self.__width):
                 rectangle.append("#")
-            rectangle.append("\n")
+            if a != self.__height:
+                rectangle.append("\n")
         return "".join(rectangle)
 
     def __repr__(self):
