@@ -13,12 +13,8 @@ class Square(Rectangle):
             size (int): height and width of new Rectangle.
         """
         super().integer_validator("size", size)
-        self.__width = size
-        self.__height = size
-
-    def area(self):
-        """Get the area."""
-        return self.__height * self.__width
+        super().__init__(size, size)
+        self.__size = size
 
     def __str__(self):
         """For print() and str() of a Rectangle."""
