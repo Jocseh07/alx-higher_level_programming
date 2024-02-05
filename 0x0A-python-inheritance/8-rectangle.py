@@ -17,13 +17,3 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
-
-    def area(self):
-        """Get the area."""
-        return self.__height * self.__width
-
-    def __str__(self):
-        """For print() and str() of a Rectangle."""
-        string = "[" + str(self.__class__.__name__)
-        string = "]" + str(self.__width) + "/" + str(self.__height)
-        return string
