@@ -7,8 +7,8 @@ class MyInt(int):
 
     def __eq__(self, value):
         """set == to !="""
-        return self != value
+        return not type(value) == int
 
     def __ne__(self, value):
         """set != to =="""
-        return self == value
+        return not type(value) != int
