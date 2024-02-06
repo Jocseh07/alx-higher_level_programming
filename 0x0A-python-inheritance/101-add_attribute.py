@@ -10,6 +10,6 @@ def add_attribute(obj, att, value):
         att(str): name of attribute to add.
         value(any): value of attritube.
     """
-    if hasattr(obj, "__dict__"):
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
     setattr(obj, att, value)
