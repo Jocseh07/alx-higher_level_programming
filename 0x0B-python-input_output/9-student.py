@@ -9,9 +9,9 @@ class Student:
         """Initialize class.
 
         Args:
-            first_name (str): first name.
-            last_name (str): last name.
-            age (int): age.
+            first_name (str): The first name.
+            last_name (str): The last name.
+            age (int): The age.
         """
         self.first_name = first_name
         self.last_name = last_name
