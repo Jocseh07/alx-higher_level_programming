@@ -82,7 +82,7 @@ class Base:
                 list_dictionaries = Base.from_json_string(f.read())
                 return [cls.create(**a) for a in list_dictionaries]
 
-        except:
+        except IOError:
             return []
 
     @classmethod
@@ -118,5 +118,5 @@ class Base:
                 list_dictionaries = Base.from_json_string(csv.reader(f))
                 return [cls.create(**a) for a in list_dictionaries]
 
-        except:
+        except IOError:
             return []
