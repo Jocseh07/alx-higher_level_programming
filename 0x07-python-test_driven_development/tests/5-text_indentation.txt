@@ -1,0 +1,17 @@
+
+=================================
+How to Use 5_text_indentation.py
+=================================
+
+This module defines a matrix division function ``text_indentation``.
+
+Usage
+=====
+
+``text_indentation`` prints text with new line after . ? and :
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation()
+		[]
