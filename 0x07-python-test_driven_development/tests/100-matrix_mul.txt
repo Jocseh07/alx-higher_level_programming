@@ -1,0 +1,67 @@
+=================================
+How to Use 100-matrix_mul.py
+=================================
+
+This module defines a matrix multiplication function ``matrix_mul``.
+
+Usage
+=====
+
+``matrix_mul`` return multiplication of matrix
+
+::
+
+		>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+  	>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]]) #doctest: +NORMALIZE_WHITESPACE
+		[[13, 16]]
+
+works with floating point numbers
+
+::
+
+  	>>> matrix_mul([[1.5, 2.5]], [[3.5, 4.5], [5.5, 6.5]]) #doctest: +NORMALIZE_WHITESPACE
+		[[19.0, 23.0]]
+
+must provide 2 values
+
+::
+
+		>>> matrix_mul([[1.5, 2.5]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: matrix_mul() missing 1 required positional argument: 'm_b'	
+
+rows must be same size
+::
+
+		>>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [3, 4]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: each row of m_b must be of the same size
+
+rows must be same size
+::
+
+		>>> matrix_mul([[1, 2, 3], [3, 4]], [[1, 2], [3, 4]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: each row of m_a must be of the same size
+
+rows must be a list of lists
+::
+
+		>>> matrix_mul([[1, 2], "str"], [[1, 2]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: m_a must be a list of lists
+
+rows must be a list of lists of integers and foats
+::
+
+		>>> matrix_mul([[1, 2], ["str"]], [[1, 2]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: m_a should contain only integers or floats
+
+
+for both m_a and m_b
+::
+
+		>>> matrix_mul([[1, 2]], [[1, 2] , ["str"]]) #doctest: +NORMALIZE_WHITESPACE
+		Traceback (most recent call last):
+		TypeError: m_b should contain only integers or floats
