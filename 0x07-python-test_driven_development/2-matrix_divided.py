@@ -12,9 +12,15 @@ def matrix_divided(matrix, div):
     """
     new = []
     str = "matrix must be a matrix (list of lists) of integers/floats"
-    l = len(matrix[0])
+    if matrix is None or len(matrix) == 0:
+        raise TypeError(str)
     if not isinstance(matrix, list):
         raise TypeError(str)
+    for a in matrix:
+        if not isinstance(a, list):
+            raise TypeError(str)
+    l = len(matrix[0])
+
     for a in matrix:
         for b in a:
             if type(b) not in [int, float]:
