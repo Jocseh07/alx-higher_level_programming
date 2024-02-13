@@ -10,8 +10,13 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     a = 0
+    found = 1
     while a < len(text):
-        print(text[a], end="")
-        if text[a] in ".?:":
-            print("\n")
+        if found == 1 and text[a] != " ":
+            found = 0
+        if found == 0:
+            print(text[a], end="")
+            if text[a] in ".?:" and found == 0:
+                print("\n")
+                found = 1
         a += 1
