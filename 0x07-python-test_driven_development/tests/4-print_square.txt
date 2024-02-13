@@ -57,3 +57,10 @@ Size must be an int greater than 0 or 0
     #########
     #########
     #########
+
+``print_square`` prints square with #
+
+::
+	>>> print_square() #doctest: +NORMALIZE_WHITESPACE
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'

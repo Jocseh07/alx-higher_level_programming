@@ -7,6 +7,8 @@ def print_square(size):
     Args:
         size (int): size of square.
     """
+    if size is None:
+        raise TypeError("size must be an integer")
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:
