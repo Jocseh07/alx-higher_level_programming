@@ -1,4 +1,4 @@
--- DISPLAY TOP 3 CITIES TEMPERATURE DURING july AND aUGUST ORDERED BY TEMP DESCCENDING
+-- Display top 3 of cities temperature during July and Auugust ordered by temperature
 SELECT `city`, AVG('value') AS `avg_temp`
 FROM `temperatures`
 WHERE `month` = 7 OR `month` = 8
