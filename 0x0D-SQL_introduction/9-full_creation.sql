@@ -1,5 +1,5 @@
 -- creates a second table in database in sql server and insert multiple rows
-CREATE TABLE IF NOT EXIST `second_table` (
+CREATE TABLE IF NOT EXISTS `second_table` (
     `id` INT,
     `name` VARCHAR(256),
     `score` INT
