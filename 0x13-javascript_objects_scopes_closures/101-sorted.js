@@ -3,7 +3,7 @@ const dict = require('./101-data.js').dict;
 const keys = Object.keys(dict);
 const values = Object.values(dict);
 const valuesSet = [...new Set(values)];
-newDict = {};
+const newDict = {};
 for (const v of valuesSet) {
   const newList = [];
   for (let a = 0; a < values.length; a++) {
