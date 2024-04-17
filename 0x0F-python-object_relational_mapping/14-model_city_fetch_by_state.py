@@ -15,7 +15,7 @@ if __name__ == "__main__":
         )
     )
     Base.metadata.create_all(engine)
-    Session = sessionmaker(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
     all = session.query(State.name, City.id, City.name).filter(
         State.id == City.state_id
