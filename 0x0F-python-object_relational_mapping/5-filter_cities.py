@@ -23,11 +23,6 @@ if __name__ == "__main__":
     all = []
     for row in rows:
         all.append(row[0])
-    for one in all:
-        print(one, sep="")
-        if (one == all[-1]):
-            print("")
-        else:
-            print("", sep=", ")
+    print(*all, sep=", ")
     cur.close()
     db.close()
