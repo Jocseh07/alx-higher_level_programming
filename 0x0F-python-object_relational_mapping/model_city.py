@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Contains class definition of State and instance Base."""
 from model_state import Base
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 mymetadata = MetaData()
