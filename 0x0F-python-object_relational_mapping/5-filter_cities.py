@@ -16,13 +16,12 @@ if __name__ == "__main__":
     cur.execute(
         "SELECT cities.id, cities.name,\
     states.name FROM cities INNER JOIN states ON\
-    states.id=cities.state_id WHERE states.name=%s",
+    states.id=cities.state_id WHERE states.name=%s ORDER BY cities.id",
         (sys.argv[4],)
     )
-    
     rows = cur.fetchall()
     for row in rows:
-        print(row, sep="")
+        print(row[0], sep="")
         if row != rows[-1]:
             print(", ", sep="")
         else:
