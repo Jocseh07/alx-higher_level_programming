@@ -20,11 +20,9 @@ if __name__ == "__main__":
         (sys.argv[4],)
     )
     rows = cur.fetchall()
+    all = []
     for row in rows:
-        print(row[0], sep="")
-        if row != rows[-1]:
-            print(", ", sep="")
-        else:
-            print("")
+        all.append(row[0])
+    print(all, sep=", ")
     cur.close()
     db.close()
