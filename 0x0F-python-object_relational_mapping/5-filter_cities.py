@@ -17,7 +17,7 @@ if __name__ == "__main__":
         "SELECT cities.id, cities.name,\
     states.name FROM cities INNER JOIN states ON\
     states.id=cities.state_id WHERE states.name=%s ORDER BY cities.id",
-        sys.argv[4],
+        (sys.argv[4],),
     )
     rows = cur.fetchall()
     for row in rows:
