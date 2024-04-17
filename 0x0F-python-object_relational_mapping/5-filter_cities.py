@@ -23,7 +23,6 @@ if __name__ == "__main__":
     all = []
     for row in rows:
         all.append(row[0])
-    all = list(all)
     print(*all, sep=", ")
     cur.close()
     db.close()
