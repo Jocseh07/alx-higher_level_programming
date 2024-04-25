@@ -3,11 +3,7 @@
 
 
 def find_peak(list_of_integers):
-    """Find a pick in list of integers.
-
-    Args:
-        list_of_integers (list): list of integers to get the peak.
-    """
+    """Find a pick in list of integers."""
     if list_of_integers is None or list_of_integers == []:
         return None
     bottom = 0
