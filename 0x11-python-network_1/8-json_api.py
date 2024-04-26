@@ -17,7 +17,7 @@ if __name__ == "__main__":
     try:
         res = r.json()
         if res == {}:
-            print("No Result")
+            print("No result")
         else:
             print("[{}] {}".format(res.get("id"), res.get("name")))
     except ValueError:
