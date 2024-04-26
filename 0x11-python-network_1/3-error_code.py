@@ -4,11 +4,10 @@
 
 if __name__ == "__main__":
     import sys
-    import urllib.error
-    import urllib.request
+    from urllib import error, request
 
     try:
-        with urllib.request.urlopen(sys.argv[1]) as res:
+        with request.urlopen(sys.argv[1]) as res:
             print(res.read().decode("utf-8"))
-    except urllib.error.HTTPError as err:
+    except error.HTTPError as err:
         print("Error code:", err.code)
