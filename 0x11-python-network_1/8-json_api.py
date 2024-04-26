@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import requests
 
     if len(sys.argv) == 1:
-        letter = ""
+        letter = '""'
     else:
         letter = sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
