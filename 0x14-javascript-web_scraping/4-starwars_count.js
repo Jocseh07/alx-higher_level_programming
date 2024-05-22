@@ -7,9 +7,7 @@ request(url, (err, response, body) => {
   }
   const total = JSON.parse(body).results;
   const count = total.reduce((count, x) => {
-    return count + x.characters.includes(
-      'https://swapi-api.alx-tools.com/api/people/18/'
-    );
+  return count + x.characters.some((character) => character.endsWith("18/"));
   }, 0);
   console.log(count);
 });
