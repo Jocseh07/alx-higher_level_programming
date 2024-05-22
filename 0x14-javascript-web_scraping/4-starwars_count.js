@@ -7,8 +7,7 @@ request(url, (err, response, body) => {
     return;
   }
   const total = JSON.parse(body).results;
-  const char = total.filter((x) => {
-    return x.characters.some((character) => character.endsWith('/18/'));
-  });
-  console.log(char.length);
+  console.log(total.reduce((acc, film) => {
+    return acc + film.characters.length;
+  }));
 });
