@@ -8,7 +8,7 @@ request(url, (err, response, body) => {
   }
   const total = JSON.parse(body).results;
   const char = total.filter((x) => {
-    return x.characters.includes('https://swapi-api.hbtn.io/api/people/18/');
+    return x.characters.some((character) => character.endsWith('/18/'));
   });
   console.log(char.length);
 });
