@@ -9,7 +9,7 @@ request(url, (err, response, body) => {
   const total = JSON.parse(body).results;
   const char = total.filter((x) => {
     return x.characters.includes(
-      "https://swapi-api.alx-tools.com/api/people/18/"
+      'https://swapi-api.alx-tools.com/api/people/18/'
     );
   });
   console.log(char.length);
