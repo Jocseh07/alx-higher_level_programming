@@ -7,10 +7,10 @@ request(url, (err, response, body) => {
     return;
   }
   const total = JSON.parse(body).results;
-  const char = total.filter((x) => {
-    return x.characters.includes(
+  const count = total.reduce((count, x) => {
+    return count + x.characters.includes(
       'https://swapi-api.alx-tools.com/api/people/18/'
     );
-  });
-  console.log(char.length);
+  }, 0);
+  console.log(count);
 });
